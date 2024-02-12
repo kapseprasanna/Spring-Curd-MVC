@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+</head>
+<body>
+	  <h3>Registeration</h3>
+	  <form action="#" th:action="@{addemp}" th:object="${emp}" method="post">
+	   Name:<input type="text" th:field="*{name}"><br>
+	    dept:<input type="text" th:field="*{dept}"><br>
+   	sal:<input type="text" th:field="*{sal}"><br>
+    <input type="submit" value="register">
+    </form>
+         
+  
+</body>
+</html>

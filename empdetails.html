@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Page</title>
+</head>
+<body>
+	  <h3>Update</h3>
+	  <form action="#" th:action="@{/update}" th:object="${emp}" method="post">
+		     <input type="hidden" th:field="*{id}"><br>
+	   Name:<input type="text" th:field="*{name}"><br>
+	    dept:<input type="text" th:field="*{dept}"><br>
+   	sal:<input type="text" th:field="*{sal}"><br>
+    <input type="submit" value="update">
+    </form>
+         
+  
+</body>
+</html>

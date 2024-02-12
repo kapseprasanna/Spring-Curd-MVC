@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Employees</title>
+</head>
+<body>
+	<table border="2px">
+		<caption>Employees List </caption>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Salary</th>
+			<th>Department</th>
+			<th>Actions</th>
+		</tr >
+		<tr th:each="emp:${allemp}">
+		<td th:text="${emp.id}"></td>
+		<td th:text="${emp.name}"></td>	
+		<td th:text="${emp.sal}"></td>	
+		<td th:text="${emp.dept}"></td>	
+		<td>
+			<!--localhost:8080/show/___ , its a get request : pathvariable -->
+			<a th:href="@{show/{id}(id=${emp.id})}">Update</a>&nbsp;&nbsp;
+			<!--localhost:8080/del?id=___ , its a get request : requestparam -->
+			<a th:href="@{del(id=${emp.id})}">Delete</a>
+		</td>	
+		</tr>
+		
+		
+	</table>
+	  
+         
+  
+</body>
+</html>
